@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/play.css"/>
+    <script src="js/jquery-2.2.3.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/playDemo4.js"></script>
+    <script src="js/modernizr.js"></script>
+</head>
+<body>
+
+<main>
+    <!--游戏模块-->
+    <div class="container">
+        <div class="gameHeader">
+            <div class="clearfloat">
+                <h2>2048</h2>
+
+                <div class="scoreContainer">
+                    <div class="score">
+                        <span>0</span>
+
+                        <div></div>
+                    </div>
+                    <div class="bestScore">
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="newGame clearfloat">
+                <a class="restartBtn" href="javascript:;">New Game</a>
+
+                <div>
+                    <p>play <strong>2048</strong> Game </p>
+                    Join the numbers and get to the <strong>2048 tile!</strong>
+                </div>
+            </div>
+        </div>
+        <div class="main0 clearfloat">
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+        </div>
+        <div class="gameStateTips">
+            <span class="tipsText"></span> <br/>
+            <a class="replayBtn" href="javascript:;">Try again</a>
+        </div>
+    </div>
+</main>
+<a href="#cd-nav" class="cd-nav-trigger">Menu
+    <span class="cd-nav-icon"></span>
+    <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+        <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157"
+                stroke-dashoffset="157"></circle>
+    </svg>
+</a>
+
+<div id="cd-nav" class="cd-nav">
+    <div class="cd-navigation-wrapper">
+        <div class="cd-half-block">
+            <h1>2048 Mini-Games</h1>
+            <!-- Demo Navigation -->
+            <nav class="nav clearfix">
+                <button class="nav-el">
+                    <b class="picText">
+                        <span class="iconfont icon-chanpinshuoming"></span>
+                        <span>Game Description</span>
+                    </b>
+
+                    <div class="gameinfo">
+                        <h3>游戏简介</h3>
+
+                        <p>一款有意思的算术小游戏，虽然是简单的加法运算，
+                            但是要将小数字累加到2048也不是一件容易的事，
+                            要注意的是，只有相同的数字才可以累加。想试试吗？
+                        </p>
+                    </div>
+                </button>
+                <button class="nav-el">
+                    <b class="picText">
+                        <span class="iconfont icon-caozuo"></span>
+                        <span>How to play</span>
+                    </b>
+
+                    <div class="gameGuide">
+                        <h3>操作指南</h3>
+
+                        <p>移动<strong style="font-size:24px;">← ↑ ↓ →</strong> 或者 <strong style="font-size:20px;">A S D W</strong>
+                            方向键控制数字移动，相同数字才可以相加。
+                            <br/>把数字累加到2048即可过关。
+			                <br/>点击<strong style="font-size:20px;">New Game</strong>可以重新开始游戏。
+                        </p>
+                    </div>
+                </button>
+                <button class="nav-el">
+                    <b class="picText">
+                        <span class="iconfont icon-sheji"></span>
+                        <span>Author</span>
+                    </b>
+
+                    <div class="gameDesigner">
+                        <h3>Game Author</h3>
+
+                        <p>
+                            Name : AinyTong
+                        </p>
+
+                        <p>
+                            E-mail : 962672201@qq.com <br/>
+                            <span style="padding-left: 60px">Ainy920920@163.com</span>
+                        </p>
+                    </div>
+                </button>
+                <button class="nav-el">
+                    <b>
+                        <span class="iconfont icon-kaishi"></span>
+                        <span>Play now</span>
+                    </b>
+                </button>
+            </nav>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

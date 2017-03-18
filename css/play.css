@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #faf8ef;
+    background: url("../img/bg-circuit-diagram-6.gif") no-repeat;
+    background-size: cover;
+    color: #776e65;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/*2048游戏模块*/
+.container{
+    width:506px;
+    margin: 0 auto;
+    position:relative;
+}
+.main0 {
+    /*width: 494px;
+    height: 494px;*/
+    border-radius: 10px;
+    border: 3px solid #ddd;
+    padding: 8px 0 8px 10px;
+    text-align: center;
+}
+
+.clearfloat:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.main0{
+    background: #bbada0;
+}
+
+.main0 div {
+    float: left;
+    width: 105px;
+    height: 105px;
+    line-height: 105px;
+    margin: 8px;
+    border-radius:5px;
+    position: relative;
+    background-color: rgba(238, 228, 218, 0.35);
+}
+
+.main0 div span {
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+}
+
+.bg {
+    background-color: rgba(238, 228, 218, 0.35);
+}
+
+.bg2 {
+    font-size: 60px;
+    background: #eee4da;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+}
+
+.bg4 {
+    font-size: 60px;
+    background: #ede0c8;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+}
+
+.bg8 {
+    color: #f9f6f2;
+    font-size: 60px;
+    background: #f2b179;
+}
+
+.bg16 {
+    color: #f9f6f2;
+    font-size: 50px;
+    background: #f59563;
+}
+
+.bg32 {
+    font-size: 50px;
+    color: #f9f6f2;
+    background: #f67c5f;
+}
+
+.bg64 {
+    font-size: 50px;
+    color: #f9f6f2;
+    background: #f65e3b;
+}
+
+.bg128 {
+    font-size: 40px;
+    color: #f9f6f2;
+    background: #edcf72;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+}
+
+.bg256 {
+    font-size: 40px;
+    color: #f9f6f2;
+    background: #edcc61;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+}
+
+.bg512 {
+    font-size: 40px;
+    color: #f9f6f2;
+    background: #edc850;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+}
+
+.bg1024 {
+    font-size: 40px;
+    color: #f9f6f2;
+    background: #edc53f;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+}
+
+.bg2048 {
+    font-size: 40px;
+    color: #f9f6f2;
+    background: #edc22e;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+}
+
+@keyframes newDiv {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes combine {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*2048游戏设置*/
+
+.gameHeader h2{
+    float:left;
+    color: #d4d1c7;
+    font-size: 74px;
+    line-height: 66px;
+}
+.scoreContainer{
+    float: right;
+    text-align: right;
+    font-size: 18px;
+}
+.score,.bestScore{
+    position: relative;
+    display: inline-block;
+    background: #bbada0;
+    padding: 15px 25px;
+    font-size: 25px;
+    height: 25px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+}
+.newGame{
+    width:100%;
+    margin:20px 0 30px;
+    color: #dbdbdb;
+}
+.restartBtn{
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 18px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 42px;
+    display: block;
+    text-align: center;
+    font-size:18px;
+    font-weight:bold;
+    float: right;
+}
+.score:after, .bestScore:after {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #eee4da;
+}
+.score:after {
+    content: "Score";
+}
+.bestScore:after {
+    content: "Best";
+}
+
+.newGame div{
+    font-size:18px;
+}
+.newGame h4{
+    font-size:20px;
+}
+@keyframes move-up {
+    0% {
+        top: 25px;
+        opacity: 1; }
+
+    100% {
+        top: -50px;
+        opacity: 0; }
+}
+.score>div{
+    position: absolute;
+    right: 30px;
+    color: #515369;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    /*color: rgba(119, 110, 101, 0.9);*/
+    z-index: 100;
+}
+.score-add{
+    animation: move-up 600ms ease-in;
+    animation-fill-mode: both;
+}
+/*游戏失败或胜利弹窗*/
+.gameStateTips{
+    position:absolute;
+    bottom:13px;
+    left:13px;
+    width:480px;
+    height:480px;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    font-weight:bold;
+    display:none;
+}
+.tipsText{
+    display:block;
+    width:100%;
+    font-size:50px;
+    margin-top:150px;
+    text-shadow: -10px 10px 8px #2e2224;
+    color: #e8b248;
+}
+a.replayBtn{
+    display:inline-block;
+    padding:10px 30px;
+    border:2px solid #d9d4cd;
+    border-radius: 5px;
+    font-size:24px;
+    color: #56545e;
+    background: #b19ea2;
+    margin-top:20px;
+}
+
